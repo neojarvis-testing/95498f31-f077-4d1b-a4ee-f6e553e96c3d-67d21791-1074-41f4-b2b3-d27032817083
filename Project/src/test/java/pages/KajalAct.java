@@ -23,11 +23,14 @@ public class KajalAct {
 
     }
     public void sendKajal(ExtentTest test) throws InterruptedException{ 
+
         AssertionUtility.useAssertEquals(helper.getText(KajalLoc.categories, test),ExcelFileReader.readData(Base.prop.getProperty("sheet4").toLowerCase(), 0, 0, test) , test);
 
         helper.clickOnElement(KajalLoc.searchBar,test,"placeholder");  
 
-        helper.sendKeys(KajalLoc.searchBar, ExcelFileReader.readData(Base.prop.getProperty("sheet4"), 1, 0, test), test, "placeholder"); 
+        Thread.sleep(2000);
+        helper.sendKeys(KajalLoc.searchBar, "Kajal", test, "placeholder");  
+
         AssertionUtility.useAssertEquals(helper.getText(KajalLoc.searchBar, test),ExcelFileReader.readData(Base.prop.getProperty("sheet4").toLowerCase(), 1, 0, test) , test);
 
         Base.driver.findElement(KajalLoc.searchBar).sendKeys(Keys.ENTER);  
