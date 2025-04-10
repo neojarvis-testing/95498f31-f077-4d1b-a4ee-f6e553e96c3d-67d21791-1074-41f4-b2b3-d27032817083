@@ -6,7 +6,7 @@ import com.aventstack.extentreports.Status;
 
 public class AssertionUtility {
     public static void useAssertEquals(String actual,String expected,ExtentTest test){ 
-    public static void useAssertEquals(String actual,String expected,ExtentTest test){ 
+    
         try{ 
             Assert.assertEquals(actual,actual); 
             LoggerHandler.info("Verification Successful: "+actual);
