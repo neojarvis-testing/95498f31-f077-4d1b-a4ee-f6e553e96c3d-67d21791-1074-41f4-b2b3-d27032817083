@@ -45,7 +45,7 @@ public class TestCase5Actions {
     public void verifyTitleOrderRelatedclickOnOrderStatusVerifyTextNavigateBackVerifyTextCanIReturnAndNavBackClickOnCancelletionsAndRefund(ExtentTest test){
         try {
             
-            
+            Thread.sleep(2000);
             helper.waitForElementToBeVisible(HelpCentreLocators.helpCentre_OrderStatus, 4, test);
             helper.clickOnElement(HelpCentreLocators.helpCentre_OrderStatus, test);
 

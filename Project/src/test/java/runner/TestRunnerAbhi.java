@@ -14,7 +14,7 @@ import pages.TestCase6Actions;
 import utils.Base;
 import utils.Reporter;
 
-public class TestRunner extends Base{
+public class TestRunnerAbhi extends Base{
     public ExtentReports reports; 
     public ExtentTest test;
     
