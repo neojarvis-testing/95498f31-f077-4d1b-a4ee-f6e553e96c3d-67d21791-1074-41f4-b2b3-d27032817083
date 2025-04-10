@@ -9,11 +9,20 @@ import utils.WebDriverHelper;
 
 public class HomePageFooterAction {
     static WebDriverHelper driverHelper = new WebDriverHelper(Base.driver);
-    
-    public static void clickNewLaunches(ExtentTest test){
+
+    /**
+     * Description: Performs actions to click on the "New Launches" section by
+     * scrolling,
+     * hovering, and switching to the appropriate window.
+     *
+     * @param test ExtentTest object for logging and reporting.
+     * @return void
+     * @author Harshit
+     */
+    public static void clickNewLaunches(ExtentTest test) {
         try {
 
-            driverHelper.scrollAndClickByPixels(test, HomePageFooterLoc.clickNewLaunches); 
+            driverHelper.scrollAndClickByPixels(test, HomePageFooterLoc.clickNewLaunches);
             driverHelper.hoverAndClick(test, HomePageFooterLoc.clickNewLaunches, HomePageFooterLoc.clickNewLaunches);
             driverHelper.switchInToWindown();
         } catch (Exception e) {

@@ -11,7 +11,6 @@ import utils.WebDriverHelper;
 
 public class AddToBagAction {
     static WebDriverHelper driverHelper = new WebDriverHelper(Base.driver);
-    static JavascriptExecutor js = (JavascriptExecutor) Base.driver;
     
     /**
  * Description:
@@ -23,6 +22,7 @@ public class AddToBagAction {
  */
     public static void clickAddToBag(ExtentTest test) {
         try {
+            Screenshot.highlightAndCapture(test, Base.driver, "Description.png", AddToBagPageLoc.clickIngredient);
             driverHelper.waitForElementToBeVisible(AddToBagPageLoc.clickAddToBag, 10, test);
             driverHelper.clickOnElement(AddToBagPageLoc.clickAddToBag, test);
         } catch (Exception e) {
@@ -74,8 +74,7 @@ public class AddToBagAction {
             driverHelper.waitForElementToBeVisible(AddToBagPageLoc.clickReadMore, 5, test);
 
             driverHelper.clickOnElement(AddToBagPageLoc.clickReadMore, test);
-            js.executeScript("window.scrollBy(0,400)", "");
-            Screenshot.highlightAndCapture(test, Base.driver, "Description.png", AddToBagPageLoc.clickIngredient);
+            Screenshot.highlightAndCapture(test, Base.driver, "Description1.png", AddToBagPageLoc.clickIngredient);
 
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
@@ -107,7 +106,7 @@ public class AddToBagAction {
     public static void sendPincode(ExtentTest test) {
         try {
             String pinCodeNumber = ExcelFileReader.readData(
-                    "Sheet1", 0, 0, test);
+                    "Sheet1", 7, 0, test);
             driverHelper.sendKeys(AddToBagPageLoc.clickPincode, pinCodeNumber, test, "placeholder");
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
@@ -138,10 +137,11 @@ public class AddToBagAction {
  * @author Harshit
  */
     public static void allAddToBag(ExtentTest test) {
-        clickAddToBag(test);
+        
         clickPincodeSearch(test);
         sendPincode(test);
         clickPincodeCheck(test);
+        clickAddToBag(test);
     }
     /**
  * Description: Performs a sequence of actions for the "Add to Bag" workflow, including clicking 
