@@ -46,4 +46,3 @@ public class Screenshot {
         captureScreenshot(driver, test, str);
     }
 }
-

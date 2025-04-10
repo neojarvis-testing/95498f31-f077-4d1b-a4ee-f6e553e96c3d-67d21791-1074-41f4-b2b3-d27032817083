@@ -51,8 +51,10 @@ public class AssertionUtility {
             Screenshot.captureScreenshot(Base.driver, test, "Error"); 
             Reporter.attachScreenshotToReport("Error", test,"Error", Base.driver);
         }
-        
+      
+
     }
+
     
 }
 
