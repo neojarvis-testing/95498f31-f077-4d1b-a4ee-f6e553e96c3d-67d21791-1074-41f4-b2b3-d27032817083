@@ -23,7 +23,7 @@ public class TestCase6Actions {
      */
     public void testCase06(ExtentTest test){
         try {
-            String data= ExcelFileReader.readData( Base.prop.getProperty("sheet1"), 0, 0, test);
+            String data= ExcelFileReader.readData( Base.prop.getProperty("sheet1"), 6, 0, test);
             helper.clickOnElement(HomePageLocators.homePage_SearchBar, test);
             helper.sendKeys(HomePageLocators.homePage_SearchBar, data, test, data);
             helper.hoverAndClick(test,HomePageLocators.homePage_LiquidLipstickSuggestion , HomePageLocators.homePage_LiquidLipstickSuggestion);
