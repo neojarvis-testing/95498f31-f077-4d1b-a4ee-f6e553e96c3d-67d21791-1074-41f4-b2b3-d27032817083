@@ -15,7 +15,7 @@ import Pages.TestCaseTenModuleTwo;
 import utils.Base;
 import utils.Reporter;
 
-public class TestRunner extends Base{
+public class TestRunnerVishal extends Base{
     public ExtentReports reports;
     public ExtentTest tests; 
     
@@ -35,6 +35,7 @@ public class TestRunner extends Base{
         openBrowser();
     }
 
+    
     @Test
     public void testcase1() throws InterruptedException{ 
       TestCaseTenModuleOne action1 = new TestCaseTenModuleOne();

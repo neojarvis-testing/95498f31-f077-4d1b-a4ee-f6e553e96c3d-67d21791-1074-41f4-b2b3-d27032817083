@@ -22,14 +22,14 @@ public class TestCaseTenModuleThree {
     } 
 
     public void verifyPage(ExtentTest test) throws InterruptedException{
-        AssertionUtility.useAssertEquals(wb.getText(LocFirstProduct.verifyChennai, test), ExcelFileReader.readData("Sheet1", 1, 0, test), test);
+        AssertionUtility.useAssertEquals(wb.getText(LocFirstProduct.verifyChennai, test), ExcelFileReader.readData("Sheet1", 6, 0, test), test);
 
         wb.scrollTillElement(LocFirstProduct.clickReview, test, "class");
         wb.scrollByToFooter(test);
         wb.hoverAndClick(test, LocFirstProduct.clickReview, LocFirstProduct.clickReview);
        
 
-        AssertionUtility.useAssertEquals(wb.getText(LocFirstProduct.verifySignin, test), ExcelFileReader.readData("Sheet1", 2, 0, test), test);
+        AssertionUtility.useAssertEquals(wb.getText(LocFirstProduct.verifySignin, test), ExcelFileReader.readData("Sheet1", 7, 0, test), test);
 
 
         //wb.waitForElementToBeVisible(LocFirstProduct.sigIn, 5, test);

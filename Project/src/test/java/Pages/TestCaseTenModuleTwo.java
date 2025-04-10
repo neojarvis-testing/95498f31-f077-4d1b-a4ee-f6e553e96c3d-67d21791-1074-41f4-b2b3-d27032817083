@@ -20,7 +20,7 @@ public class TestCaseTenModuleTwo {
             wb.hoverOverElement(LocNykaaMan.clickHealth, test);
             wb.clickOnElement(LocNykaaMan.clickWheyProtein, test);
             wb.switchToWindow(2, test);
-            AssertionUtility.useAssertEquals(wb.getText(LocNykaaMan.verifyThree, test), ExcelFileReader.readData( "Sheet1", 0, 0, test), test);
+            AssertionUtility.useAssertEquals(wb.getText(LocNykaaMan.verifyThree, test), ExcelFileReader.readData( "Sheet1", 5, 0, test), test);
 
         }
 
