@@ -24,7 +24,7 @@ public class Reporter {
 
     private static Properties prop;
     private static ExtentReports extentReport;
-    
+
 
     public static ExtentReports generateExtentReport() {
         return generateExtentReport(null);
@@ -86,6 +86,7 @@ public class Reporter {
     }
 
     
+
     public static String captureScreenShot(String filename, WebDriver driver) {
         String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
         String name = filename + timestamp + ".png";

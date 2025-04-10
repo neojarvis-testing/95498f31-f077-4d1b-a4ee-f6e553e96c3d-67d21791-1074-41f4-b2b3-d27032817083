@@ -2,6 +2,8 @@ package utils;
 
 import java.io.File;
 import java.io.IOException;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -10,6 +12,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 public class Screenshot {
+    
+
     public static void captureScreenshot(WebDriver driver,ExtentTest test1,String str){ 
         TakesScreenshot ts = (TakesScreenshot) driver;
 
@@ -32,5 +36,12 @@ public class Screenshot {
             test1.log(Status.FAIL, "Screenshot not Captured");
 
         }
+    }
+
+    public static void highlightAndCapture(ExtentTest test,WebDriver driver,String str,By elementToHighlight){ 
+        WebDriverHelper helper=new WebDriverHelper(Base.driver);
+        helper.highlightElement(test,elementToHighlight);
+
+        captureScreenshot(driver, test, str);
     }
 }
