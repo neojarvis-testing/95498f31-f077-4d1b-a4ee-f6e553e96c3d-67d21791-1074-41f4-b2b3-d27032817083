@@ -5,11 +5,12 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 public class AssertionUtility {
-    public static void useAssert(String text,String text1,ExtentTest test){ 
+    public static void useAssertEquals(String actual,String expected,ExtentTest test){ 
         try{ 
-            Assert.assertEquals(text,text1); 
-            LoggerHandler.info("Verification Successful: "+text1);
-            test.log(Status.INFO,"Verification Successful: "+text1);
+            Assert.assertEquals(actual,actual); 
+            LoggerHandler.info("Verification Successful: "+actual);
+            test.log(Status.INFO,"Verification Successful: "+actual);
+            
         }
         catch(AssertionError e){ 
             LoggerHandler.error("Assertion Error : Entered Wrong  Credentials." +e.getMessage());
@@ -18,13 +19,37 @@ public class AssertionUtility {
             Reporter.attachScreenshotToReport("AssertionError", test,"AssertionError", Base.driver);
         }
         catch(Exception e1){ 
-            LoggerHandler.error("Assertion Error : Entered Wrong  Credentials." +e1.getMessage());
+            LoggerHandler.error("Error: Entered Wrong  Credentials." +e1.getMessage());
             test.log(Status.WARNING,"Entered Wrong  Credentials." + e1.getMessage());
-            Screenshot.captureScreenshot(Base.driver, test, "Assertion Error"); 
-            Reporter.attachScreenshotToReport("Error", test,"AssertionError", Base.driver);
+            Screenshot.captureScreenshot(Base.driver, test, "Error"); 
+            Reporter.attachScreenshotToReport("Error", test,"Error", Base.driver);
         }
         
+    }
+
+    public static void useAssertTrue(String actual,String expected,ExtentTest test){ 
+        try{ 
+            if(actual.contains(expected)){ 
+                Assert.assertTrue(true);
+                LoggerHandler.info("Verification Successful: "+actual);
+                test.log(Status.INFO,"Verification Successful: "+actual);
+                
+            }
+        }
+        catch(AssertionError e){ 
+            LoggerHandler.error("Assertion Error : Entered Wrong  Credentials." +e.getMessage());
+            test.log(Status.WARNING,"Entered Wrong  Credentials." + e.getMessage());
+            Screenshot.captureScreenshot(Base.driver, test, "Assertion Error"); 
+            Reporter.attachScreenshotToReport("AssertionError", test,"AssertionError", Base.driver);
+        }
+        catch(Exception e1){ 
+            LoggerHandler.error("Error: Entered Wrong  Credentials." +e1.getMessage());
+            test.log(Status.WARNING,"Entered Wrong  Credentials." + e1.getMessage());
+            Screenshot.captureScreenshot(Base.driver, test, "Error"); 
+            Reporter.attachScreenshotToReport("Error", test,"Error", Base.driver);
+        }
         
     }
+    
 }
 

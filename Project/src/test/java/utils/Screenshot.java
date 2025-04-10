@@ -2,36 +2,48 @@ package utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.io.FileHandler;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
+import com.google.common.io.Files;
 
 public class Screenshot {
-    public static void captureScreenshot(WebDriver driver,ExtentTest test1,String str){ 
-        TakesScreenshot ts = (TakesScreenshot) driver;
+    
+    public static TakesScreenshot ts;
+    public static void captureScreenshot(WebDriver driver,ExtentTest test1,String filename){ 
+        String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        String name = filename + timestamp + ".png";
 
-        File ss = ts.getScreenshotAs(OutputType.FILE);
+        String destPath = "./" + name;
 
-        String screenshot = str;
+        ts = (TakesScreenshot) driver;
+        File file = ts.getScreenshotAs(OutputType.FILE);
 
-        File target = new File(System.getProperty("user.dir") + "/screenshots/");
+        // Create the screenshots directory if it doesn't exist
+        File screenshotsDir = new File(System.getProperty("user.dir") + "/screenshots");
 
-        String target1 = System.getProperty("user.dir") + "/screenshots/";
-        if (!target.exists()) {
-            target.mkdirs();
+        if (!screenshotsDir.exists()) {
+            screenshotsDir.mkdirs();
         }
 
+        File target = new File(screenshotsDir, name);
         try {
-            FileHandler.copy(ss, new File(target1 + screenshot));
-            test1.log(Status.INFO, "Screenshot Captured");
+            Files.copy(file, target);
         } catch (IOException e) {
             e.printStackTrace();
-            test1.log(Status.FAIL, "Screenshot not Captured");
-
         }
+    }
+
+    public static void highlightAndCapture(ExtentTest test,WebDriver driver,String str,By elementToHighlight){ 
+        WebDriverHelper helper=new WebDriverHelper(Base.driver);
+        helper.highlightElement(test,elementToHighlight);
+
+        captureScreenshot(driver, test, str);
     }
 }
 
