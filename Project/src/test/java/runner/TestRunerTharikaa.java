@@ -18,7 +18,7 @@ import pages.NykaaPillowSearch;
 import utils.Base;
 import utils.Reporter;
 
-public class TestRun extends Base{
+public class TestRunerTharikaa extends Base{
      
     public ExtentReports report; 
      public ExtentTest test;
@@ -44,7 +44,7 @@ public class TestRun extends Base{
  * @return void
  * @priority 1
  * @enabled true
- * @author Tharikaa
+ * @author Tharikaa Srinithi
  */
     @Test(priority = 1 , enabled = true)
     public void testcase1(){ 
@@ -68,7 +68,7 @@ public class TestRun extends Base{
  * @return void
  * @priority 2
  * @enabled true
- * @author Tharikaa
+ * @author Tharikaa Srinithi
  */
     @Test(priority = 2 , enabled = true)
     public void testcase2()

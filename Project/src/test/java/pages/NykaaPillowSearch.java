@@ -10,6 +10,14 @@ public class NykaaPillowSearch {
 
     WebDriverHelper help = new WebDriverHelper(Base.driver);
 
+    /**
+ * Description:
+ * This method validates the presence of a pillow search result on Nykaa by checking its visibility.
+ *
+ * @param test ExtentTest object for logging and reporting.
+ * @return void
+ * @autor Tharikaa
+ */
     public void PillowSearch(ExtentTest test) {
         help.waitForElementToBeVisible(NykaaPillowSearchLoc.verifypillow, 4, test);
 
@@ -17,6 +25,15 @@ public class NykaaPillowSearch {
         System.out.println(newtext);
     }
 
+
+/**
+ * Description:
+ * This method applies filters to the pillow search results, including price, discount, and average customer rating.
+ *
+ * @param test ExtentTest object for logging and reporting.
+ * @return void
+ * @autor Tharikaa
+ */
     public void filterPillowSearch(ExtentTest test)
     {
 
@@ -40,6 +57,14 @@ public class NykaaPillowSearch {
 
     }
 
+/**
+ * Description:
+ * This method clicks on the first pillow product and switches to its detailed view in a new window.
+ *
+ * @param test ExtentTest object for logging and reporting.
+ * @return void
+ * @author Tharikaa
+ */
     public void clickfirstProductPillow(ExtentTest test)
     {
 
@@ -50,6 +75,14 @@ public class NykaaPillowSearch {
     }
 
 
+/**
+ * Description:
+ * This method orchestrates the pillow search process by validating results, applying filters, and selecting a product.
+ *
+ * @param test ExtentTest object for logging and reporting.
+ * @return void
+ * @author Tharikaa
+ */
     public void pillowSearch(ExtentTest test)
     {
         PillowSearch(test);

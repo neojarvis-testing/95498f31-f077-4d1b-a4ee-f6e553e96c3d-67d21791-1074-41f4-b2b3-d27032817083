@@ -12,7 +12,7 @@ public class NykaaHomeSearch {
 
     WebDriverHelper help = new WebDriverHelper(Base.driver);
 
-    /**
+/**
  * Description:
  * This method performs the search functionality for pillow products on the homepage.
  * It waits for the search element to be visible, inputs data from an Excel file,
@@ -26,7 +26,7 @@ public class NykaaHomeSearch {
         try {
             help.waitForElementToBeVisible(NykaaHomePageLoc.search, 3, test);
             help.clickOnElement(NykaaHomePageLoc.search, test);
-            String data = ExcelFileReader.readData(Base.prop.getProperty("sheet1"), 0, 0, test);
+            String data = ExcelFileReader.readData(Base.prop.getProperty("sheet1"), 9, 0, test);
             help.sendKeys(NykaaHomePageLoc.search, data, test, "placeholder");
             help.enterAction(NykaaHomePageLoc.search, test);
         } catch (Exception e) {
@@ -34,12 +34,21 @@ public class NykaaHomeSearch {
         }
     }
 
+
+ /**
+ * Description:
+ * This method handles the search functionality for Kurta products on Nykaa's homepage.
+ *
+ * @param test ExtentTest object for logging and reporting.
+ * @return void
+ * @author Tharikaa
+ */
     public void homeSearchKurta(ExtentTest test) {
 
         try {
             help.waitForElementToBeVisible(NykaaHomePageLoc.search, 3, test);
             help.clickOnElement(NykaaHomePageLoc.search, test);
-            String data = ExcelFileReader.readData(Base.prop.getProperty("sheet1"), 1, 0, test);
+            String data = ExcelFileReader.readData(Base.prop.getProperty("sheet1"), 10, 0, test);
             help.sendKeys(NykaaHomePageLoc.search, data, test, "placeholder");
             help.enterAction(NykaaHomePageLoc.search, test);
         }

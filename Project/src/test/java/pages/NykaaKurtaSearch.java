@@ -11,6 +11,14 @@ public class NykaaKurtaSearch {
 
     WebDriverHelper help = new WebDriverHelper(Base.driver);
     
+/**
+ * Description:
+ * This method validates Kurta search results, sorts them by popularity, and selects a product for further actions.
+ *
+ * @param test ExtentTest object for logging and reporting.
+ * @return void
+ * @author Tharikaa
+ */
     public void kurtasearch(ExtentTest test)
     {
         help.waitForElementToBeVisible(NykaaKurtaSearchLoc.verifyKurtas,4 ,test);

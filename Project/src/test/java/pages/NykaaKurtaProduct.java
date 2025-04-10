@@ -10,6 +10,14 @@ public class NykaaKurtaProduct {
 
     WebDriverHelper help = new WebDriverHelper(Base.driver);
 
+/**
+ * Description:
+ * This method validates and interacts with Kurta product elements, including size guide, reviews, and helpful votes.
+ *
+ * @param test ExtentTest object for logging and reporting.
+ * @return void
+ * @author Tharikaa
+ */
     public void kurtaProduct(ExtentTest test)
     {
       help.waitForElementToBeVisible(NykaaKurtaProductLoc.SizeGuide,3 ,test);
