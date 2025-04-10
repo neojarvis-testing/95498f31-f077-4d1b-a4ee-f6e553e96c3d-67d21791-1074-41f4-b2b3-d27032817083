@@ -9,7 +9,11 @@ public class NewLaunchesLoc {
     
 
     public static By newLaunchesVerify=By.xpath("(//h1[@class='css-c0pzm0'])"); 
+    public static By hoverNatural = By.xpath("//a[text()='Natural']");
+    public static By clickFaceWash = By.xpath("//a[text()=' Face Wash']");
+    public static By verifyNewLaunches = By.cssSelector("h1[class='css-c0pzm0']");
 
     
 
 }
+

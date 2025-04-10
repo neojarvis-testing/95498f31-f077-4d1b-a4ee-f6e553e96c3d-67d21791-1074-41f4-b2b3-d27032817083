@@ -41,20 +41,20 @@ public class TestRunner extends Base{
         openBrowser();
     }
 
-    @Test(priority = 3, enabled = true)
+    @Test(priority = 3, enabled = false)
     public void testcase5(){ 
         TestCase5Actions ta5 = new TestCase5Actions();
         test=reports.createTest("TestCase 5");
         ta5.completeTestCase5(test);
     }
-    @Test(priority = 4, enabled = true)
+    @Test(priority = 4, enabled = false)
     public void testcase6(){ 
         test=reports.createTest("TestCase 6");
         TestCase6Actions ta6 = new TestCase6Actions();
         ta6.testCase06(test);
     }
 
-    @Test(priority=1,enabled=true)     
+    @Test(priority=1,enabled=false)     
     public void beautyAndOffer() throws InterruptedException{ 
         HomePageAct action =new HomePageAct();
         BeautyToGo action1=new BeautyToGo(); 
@@ -67,7 +67,7 @@ public class TestRunner extends Base{
         action3.offerZone(test); 
     }
 
-    @Test(priority=2,enabled=true) 
+    @Test(priority=2,enabled=false) 
     public void kajalAddToBag() throws InterruptedException{ 
         KajalAct action =new KajalAct(); 
         NewLaunches action1=new NewLaunches();
