@@ -15,7 +15,12 @@ import pages.NykaaMan;
 import utils.Base;
 import utils.Reporter;
 
-public class TestRunner extends Base{
+
+/**
+ * TestRunnerKumaran class is the test runner for executing test cases.
+ * It uses TestNG annotations for setting up and tearing down the test environment.
+ */
+public class TestRunnerKumaran extends Base{
 
     public static ExtentReports report;
     public static ExtentTest test;
@@ -29,7 +34,7 @@ public class TestRunner extends Base{
     public void configBrowser()
     {
         openBrowser();
-        test = report.createTest("Test1");
+        test = report.createTest("TestCase9");
     }
 
     @Test
