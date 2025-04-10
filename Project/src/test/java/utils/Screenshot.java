@@ -34,6 +34,7 @@ public class Screenshot {
         File target = new File(screenshotsDir, name);
         try {
             Files.copy(file, target);
+            
         } catch (IOException e) {
             e.printStackTrace();
         }
