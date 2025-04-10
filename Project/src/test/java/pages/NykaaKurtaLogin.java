@@ -1,0 +1,25 @@
+package pages;
+
+import com.aventstack.extentreports.ExtentTest;
+
+import uistore.NykaaKurtaLoginLoc;
+import utils.Base;
+import utils.LoggerHandler;
+import utils.Screenshot;
+import utils.WebDriverHelper;
+
+public class NykaaKurtaLogin {
+
+  WebDriverHelper help = new WebDriverHelper(Base.driver);
+
+  public void kurtaLogin(ExtentTest test) {
+    help.waitForElementToBeVisible(NykaaKurtaLoginLoc.mobile, 3, test);
+    help.clickOnElement(NykaaKurtaLoginLoc.mobile, test);
+    help.sendKeys(NykaaKurtaLoginLoc.mobile, "9876543210", test, "name");
+    help.waitForElementToBeVisible(NykaaKurtaLoginLoc.submit, 3, test);
+    help.clickOnElement(NykaaKurtaLoginLoc.submit, test);
+    Screenshot.captureScreenshot(Base.driver, test, "Login.png");
+    LoggerHandler.info("Login Page");
+  }
+
+}
