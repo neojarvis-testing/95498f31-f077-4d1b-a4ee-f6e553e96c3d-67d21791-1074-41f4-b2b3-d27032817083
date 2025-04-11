@@ -6,6 +6,7 @@ import com.aventstack.extentreports.Status;
 
 public class AssertionUtility {
     public static void useAssertEquals(String actual,String expected,ExtentTest test){ 
+    
         try{ 
             Assert.assertEquals(actual,actual); 
             LoggerHandler.info("Verification Successful: "+actual);
@@ -19,6 +20,7 @@ public class AssertionUtility {
             Reporter.attachScreenshotToReport("AssertionError", test,"AssertionError", Base.driver);
         }
         catch(Exception e1){ 
+            LoggerHandler.error("Error: Entered Wrong  Credentials." +e1.getMessage());
             LoggerHandler.error("Error: Entered Wrong  Credentials." +e1.getMessage());
             test.log(Status.WARNING,"Entered Wrong  Credentials." + e1.getMessage());
             Screenshot.captureScreenshot(Base.driver, test, "Error"); 
@@ -41,6 +43,7 @@ public class AssertionUtility {
             test.log(Status.WARNING,"Entered Wrong  Credentials." + e.getMessage());
             Screenshot.captureScreenshot(Base.driver, test, "Assertion Error"); 
             Reporter.attachScreenshotToReport("AssertionError", test,"AssertionError", Base.driver);
+            Reporter.attachScreenshotToReport("AssertionError", test,"AssertionError", Base.driver);
         }
         catch(Exception e1){ 
             LoggerHandler.error("Error: Entered Wrong  Credentials." +e1.getMessage());
@@ -48,7 +51,9 @@ public class AssertionUtility {
             Screenshot.captureScreenshot(Base.driver, test, "Error"); 
             Reporter.attachScreenshotToReport("Error", test,"Error", Base.driver);
         }
-        
+      
+
     }
+
     
 }
