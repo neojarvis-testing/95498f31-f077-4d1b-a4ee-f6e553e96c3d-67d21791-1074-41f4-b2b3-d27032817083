@@ -9,14 +9,15 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import pages.TestCase5Actions;
-import pages.TestCase6Actions;
+import pages.TestCaseTenModuleOne;
+import pages.TestCaseTenModuleThree;
+import pages.TestCaseTenModuleTwo;
 import utils.Base;
 import utils.Reporter;
 
-public class TestRunnerAbhi extends Base{
-    public ExtentReports reports; 
-    public ExtentTest test;
+public class TestRunnerVishal extends Base{
+    public ExtentReports reports;
+    public ExtentTest tests; 
     
     /*
      *Description: Generate Extent Report for Nykaa Website
@@ -34,17 +35,18 @@ public class TestRunnerAbhi extends Base{
         openBrowser();
     }
 
-    @Test(priority = 1, enabled = true)
-    public void testcase5(){ 
-        TestCase5Actions ta5 = new TestCase5Actions();
-        test=reports.createTest("TestCase 5");
-        ta5.completeTestCase5(test);
-    }
-    @Test(priority = 2, enabled = true)
-    public void testcase6(){ 
-        test=reports.createTest("TestCase 6");
-        TestCase6Actions ta6 = new TestCase6Actions();
-        ta6.testCase06(test);
+    
+    @Test(priority=5)
+    public void testcase1() throws InterruptedException{ 
+      TestCaseTenModuleOne action1 = new TestCaseTenModuleOne();
+      TestCaseTenModuleTwo action2 = new TestCaseTenModuleTwo();
+      TestCaseTenModuleThree action3 = new TestCaseTenModuleThree();
+        tests = reports.createTest("TestCase 10");
+
+        action1.footerPage(tests);
+        action2.nykaaManPage(tests);
+        action3.firstProductPage(tests);
+      
     }
 
     /*

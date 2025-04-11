@@ -12,51 +12,56 @@ import utils.WebDriverHelper;
 public class TestCase5Actions {
     WebDriverHelper helper = new WebDriverHelper(Base.driver);
     AssertionUtility assertion = new AssertionUtility(); 
+    
      /**
-     * Completes the entire test case 5 by executing all the necessary steps.
+     * Executes the steps for test case 5.
      * 
      * @param test The ExtentTest object used for logging the test steps.
+     *
+     * @author Abhiram
      */
+
     public void completeTestCase5(ExtentTest test){
-        clickOnHelpSwitchWindowVerifyTitleAndClickOnOrderRelated(test);
-        verifyTitleOrderRelatedclickOnOrderStatusVerifyTextNavigateBackVerifyTextCanIReturnAndNavBackClickOnCancelletionsAndRefund(test);
-        clickOnCancellationPolicyClickOnLinkSwitchWindowVerifyURL(test);
+        clickOnHelp_ClickOnOrderRelated(test);
+        NavigateAnd_ClickOnCancelletionsAndRefund(test);
+        clickOnCancellationPolicy_ClickOnLinkSwitchWindow(test);
     }     
-    /**
-     * Clicks on the Help link, switches to the new window, verifies the title, 
-     * and clicks on the Order Related link.
+    
+     /**
+     * Clicks on the Help button and then clicks on the Order Related option.
      * 
      * @param test The ExtentTest object used for logging the test steps.
      */
-    public void clickOnHelpSwitchWindowVerifyTitleAndClickOnOrderRelated(ExtentTest test){
+
+    public void clickOnHelp_ClickOnOrderRelated(ExtentTest test){
         helper.clickOnElement(HomePageLocators.homepage_Help, test);
         helper.switchToWindow(1, test);;
         helper.waitForElementToBeVisible(HelpCentreLocators.helpCentre_OrderRelated, 4, test);
-        //assertion.useAssertEquals("Help Centre", "Help Centre", test);
         helper.clickOnElement(HelpCentreLocators.helpCentre_OrderRelated, test);
     }
-    /**
-     * Verifies the title of the Order Related page, clicks on the Order Status link, 
-     * verifies the text, navigates back, verifies the text for Can I Return, navigates back, 
-     * and clicks on the Cancellations and Refund link.
+    
+     /**
+     * Navigates through the help center and clicks on the Cancellations and Refund option.
      * 
      * @param test The ExtentTest object used for logging the test steps.
      */
-    public void verifyTitleOrderRelatedclickOnOrderStatusVerifyTextNavigateBackVerifyTextCanIReturnAndNavBackClickOnCancelletionsAndRefund(ExtentTest test){
+
+    public void NavigateAnd_ClickOnCancelletionsAndRefund(ExtentTest test){
         try {
             
             Thread.sleep(2000);
-            helper.waitForElementToBeVisible(HelpCentreLocators.helpCentre_OrderStatus, 4, test);
+            helper.waitForElementToBeVisible(HelpCentreLocators.helpCentre_OrderStatus, 7, test);
             helper.clickOnElement(HelpCentreLocators.helpCentre_OrderStatus, test);
 
             Thread.sleep(2000);
             Base.driver.navigate().back();
+            Thread.sleep(2000);
 
             helper.waitForElementToBeVisible(HelpCentreLocators.helpCentre_returnsAndRefund, 4, test);
             helper.hoverOverElement(HelpCentreLocators.helpCentre_returnsAndRefund, test);
             helper.clickOnElement(HelpCentreLocators.helpCentre_returnsAndRefund, test);
             
-            
+            Thread.sleep(2000);
             Base.driver.navigate().back();
             Thread.sleep(2000);
 
@@ -69,14 +74,14 @@ public class TestCase5Actions {
         
     }
     
+    
      /**
-     * Clicks on the Cancellation Policy link, switches to the new window, 
-     * and verifies the URL.
+     * Clicks on the Cancellation Policy link and switches to the new window.
      * 
      * @param test The ExtentTest object used for logging the test steps.
      */
 
-    public void clickOnCancellationPolicyClickOnLinkSwitchWindowVerifyURL(ExtentTest test){
+    public void clickOnCancellationPolicy_ClickOnLinkSwitchWindow(ExtentTest test){
         helper.waitForElementToBeVisible(HelpCentreLocators.helpCentre_CancellationPolicy, 4, test);
         helper.clickOnElement(HelpCentreLocators.helpCentre_CancellationPolicy, test);
         helper.waitForElementToBeVisible(HelpCentreLocators.helpCentre_CancellationPolicyLink, 4, test);
@@ -84,7 +89,7 @@ public class TestCase5Actions {
         helper.clickOnElement(HelpCentreLocators.helpCentre_CancellationPolicyLink, test);
         helper.switchToWindow(2,test);
         Base.driver.getCurrentUrl();
-
+        
         Screenshot.captureScreenshot(Base.driver, test, "Cancellation policy");
     }
 }
