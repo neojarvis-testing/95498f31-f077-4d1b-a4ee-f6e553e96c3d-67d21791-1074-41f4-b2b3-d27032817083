@@ -105,6 +105,7 @@ public class AddToBagAction {
  */
     public static void sendPincode(ExtentTest test) {
         try {
+            Thread.sleep(2000);
             String pinCodeNumber = ExcelFileReader.readData(
                     "Sheet1", 7, 0, test);
             driverHelper.sendKeys(AddToBagPageLoc.clickPincode, pinCodeNumber, test, "placeholder");
@@ -159,5 +160,7 @@ public class AddToBagAction {
         clickReadMore(test);
         
     }
+
+    
 
 }

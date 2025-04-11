@@ -62,6 +62,6 @@ public class BeautyToGo {
         helper.switchToWindow(2,test);
 
         AssertionUtility.useAssertTrue(ExcelFileReader.readData(Base.prop.getProperty("sheet1"), 2, 0, test), helper.getText(BeautyToGoLoc.verifyTermsAndConditions,test), test);
-    }  
+    }
 
 }
