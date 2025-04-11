@@ -32,7 +32,7 @@ public class TestCaseTenModuleThree {
         AssertionUtility.useAssertEquals(wb.getText(LocFirstProduct.verifySignin, test), ExcelFileReader.readData("Sheet1", 7, 0, test), test);
 
 
-        //wb.waitForElementToBeVisible(LocFirstProduct.sigIn, 5, test);
+       
         Screenshot.captureScreenshot(Base.driver, test, "nykaa");
         Reporter.attachScreenshotToReport("nykaa", test, "ss captured", Base.driver);
     }
