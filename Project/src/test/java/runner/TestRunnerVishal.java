@@ -36,7 +36,7 @@ public class TestRunnerVishal extends Base{
     }
 
     
-    @Test(priority=5,enabled=false)
+    @Test(priority=5)
     public void testcase1() throws InterruptedException{ 
       TestCaseTenModuleOne action1 = new TestCaseTenModuleOne();
       TestCaseTenModuleTwo action2 = new TestCaseTenModuleTwo();

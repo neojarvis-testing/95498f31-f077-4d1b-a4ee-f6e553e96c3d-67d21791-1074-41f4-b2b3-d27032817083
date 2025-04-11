@@ -49,7 +49,7 @@ public class TestRunnerHarsh extends Base {
      * @return void
      * @author Harshit
      */
-    @Test(priority = 6, enabled = false)
+    @Test(priority = 6, enabled = true)
     public void nyka() {
         HomePageFooterAction.clickNewLaunches(test);
         NewLaunchesAction.allLaunches(test);
@@ -72,7 +72,7 @@ public class TestRunnerHarsh extends Base {
      * @return void
      * @author Harshit
      */
-    @Test(priority = 7, enabled = false)
+    @Test(priority = 7, enabled = true)
     public void nyka4() {
         HomePageNavbarAction.navbarAll(test);
         TonerAction.allToner(test);

@@ -41,20 +41,20 @@ public class TestRunner extends Base{
         openBrowser();
     }
 
-    @Test(priority = 3,enabled=false)
+    @Test(priority = 3)
     public void testcase5(){ 
         TestCase5Actions ta5 = new TestCase5Actions();
         test=reports.createTest("TestCase 5");
         ta5.completeTestCase5(test);
     }
-    @Test(priority = 4,enabled=false)
+    @Test(priority = 4)
     public void testcase6(){ 
         test=reports.createTest("TestCase 6");
         TestCase6Actions ta6 = new TestCase6Actions();
         ta6.testCase06(test);
     }
 
-    @Test(priority=1,enabled=false)     
+    @Test(priority=1)     
     public void beautyAndOffer() throws InterruptedException{ 
         HomePageAct action =new HomePageAct();
         BeautyToGo action1=new BeautyToGo(); 

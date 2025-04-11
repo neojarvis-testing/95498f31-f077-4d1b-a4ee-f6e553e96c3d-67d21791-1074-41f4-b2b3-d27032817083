@@ -29,7 +29,7 @@ public class KajalAct {
         helper.clickOnElement(KajalLoc.searchBar,test,"placeholder");  
 
         Thread.sleep(2000);
-        helper.sendKeys(KajalLoc.searchBar, "Kajal", test, "placeholder");  
+        helper.sendKeys(KajalLoc.searchBar, ExcelFileReader.readData(Base.prop.getProperty("sheet4"), 1, 0, test), test, "placeholder");  
 
         AssertionUtility.useAssertEquals(helper.getText(KajalLoc.searchBar, test),ExcelFileReader.readData(Base.prop.getProperty("sheet4").toLowerCase(), 1, 0, test) , test);
 

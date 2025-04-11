@@ -46,7 +46,8 @@ public class TestRunerTharikaa extends Base{
  * @enabled true
  * @author Tharikaa Srinithi
  */
-    @Test(priority = 1 , enabled = true)
+    @Test(enabled = true)
+
     public void testcase1(){ 
       test = report.createTest("NYKAA_Report");
       NykaaHomeSearch action1 = new NykaaHomeSearch();
@@ -70,7 +71,7 @@ public class TestRunerTharikaa extends Base{
  * @enabled true
  * @author Tharikaa Srinithi
  */
-    @Test(priority = 2 , enabled = true)
+    @Test(enabled = true)
     public void testcase2()
     {
         test = report.createTest("NYKAA_Report");
