@@ -68,7 +68,7 @@ public class TestRunner extends Base{
     public void testcase6(){ 
         test=reports.createTest("TestCase 6");
         TestCase6Actions ta6 = new TestCase6Actions();
-        ta6.testCase06(test);
+        ta6.CompleteTestCase06(test);
     }
 
     /**

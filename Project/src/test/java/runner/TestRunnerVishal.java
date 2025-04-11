@@ -9,9 +9,9 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
-import Pages.TestCaseTenModuleOne;
-import Pages.TestCaseTenModuleThree;
-import Pages.TestCaseTenModuleTwo;
+import pages.TestCaseTenModuleOne;
+import pages.TestCaseTenModuleThree;
+import pages.TestCaseTenModuleTwo;
 import utils.Base;
 import utils.Reporter;
 

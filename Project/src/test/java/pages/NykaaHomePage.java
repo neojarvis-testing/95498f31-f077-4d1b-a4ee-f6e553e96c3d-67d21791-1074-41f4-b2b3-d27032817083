@@ -1,6 +1,9 @@
 package pages;
 
+import com.aventstack.extentreports.ExtentTest;
+
 import runner.TestRunnerKumaran;
+import uistore.HomePageLoc;
 import uistore.NykaaFooterLoc;
 import utils.Base;
 import utils.WebDriverHelper;
@@ -27,6 +30,11 @@ public class NykaaHomePage {
         helper.scrollByToFooter(TestRunnerKumaran.test);
         helper.hoverAndClick(TestRunnerKumaran.test, NykaaFooterLoc.footerLuxe, NykaaFooterLoc.footerLuxe);
         helper.switchToWindow(1,TestRunnerKumaran.test);
+    }
+    public void getApp(ExtentTest test) { 
+        helper.hoverAndClick(test, HomePageLoc.getApp, HomePageLoc.getApp); 
+
+        helper.switchToWindow(1,test); 
     }
 
 }
