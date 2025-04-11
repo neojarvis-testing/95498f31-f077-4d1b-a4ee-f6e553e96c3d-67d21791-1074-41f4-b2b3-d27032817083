@@ -43,7 +43,7 @@ public class LoggerHandler {
         logger.trace(message);
     }
  
-   
+    
     public static void debug(String message) {
         logger.debug(message);
     }
@@ -53,7 +53,7 @@ public class LoggerHandler {
         logger.info(message);
     }
  
-   
+    
     public static void warn(String message) {
         logger.warn(message);
     }
