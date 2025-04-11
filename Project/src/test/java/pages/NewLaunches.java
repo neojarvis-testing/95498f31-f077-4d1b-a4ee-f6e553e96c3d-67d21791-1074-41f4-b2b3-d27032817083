@@ -2,6 +2,7 @@ package pages;
 
 import com.aventstack.extentreports.ExtentTest;
 
+import uistore.KajalLoc;
 import uistore.NewLaunchesLoc;
 import utils.AssertionUtility;
 import utils.Base;

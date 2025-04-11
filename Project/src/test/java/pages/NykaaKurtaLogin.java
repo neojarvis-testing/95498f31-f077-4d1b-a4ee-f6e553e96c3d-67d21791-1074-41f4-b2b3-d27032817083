@@ -43,7 +43,6 @@ public class NykaaKurtaLogin {
     catch(Exception e){
       e.printStackTrace();
     }
-    help.waitForElementToBeVisible(NykaaKurtaLoginLoc.submit, 3, test);
     help.clickOnElement(NykaaKurtaLoginLoc.submit, test);
     Screenshot.captureScreenshot(Base.driver, test, "Login.png");
     LoggerHandler.info("Login Page");

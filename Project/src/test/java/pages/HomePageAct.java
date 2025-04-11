@@ -1,10 +1,18 @@
 package pages;
 
+import org.openqa.selenium.By;
 
 import com.aventstack.extentreports.ExtentTest;
 
+import uistore.BeautyToGoLoc;
 import uistore.HomePageLoc;
+import uistore.OfferZoneLoc;
+import uistore.TermsConditionsLoc;
+import utils.AssertionUtility;
 import utils.Base;
+import utils.ExcelFileReader;
+import utils.Reporter;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 /**

@@ -30,6 +30,12 @@ public class NykaaKurtaProduct {
       boolean newtext3 = Base.driver.findElement(NykaaKurtaProductLoc.ReadAllViews).isDisplayed();
       System.out.println(newtext3);
       help.hoverAndClick(test,NykaaKurtaProductLoc.helpful,NykaaKurtaProductLoc.helpful);
+      try{
+        Thread.sleep(4000);
+      }
+      catch(Exception e){
+        e.printStackTrace();
+      }
   
     }
 }

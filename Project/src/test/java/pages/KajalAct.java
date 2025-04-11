@@ -4,10 +4,14 @@ import org.openqa.selenium.Keys;
 
 import com.aventstack.extentreports.ExtentTest;
 
+import uistore.AddToBagLoc;
 import uistore.KajalLoc;
+import uistore.NewLaunchesLoc;
 import utils.AssertionUtility;
 import utils.Base;
 import utils.ExcelFileReader;
+import utils.Reporter;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 /**
@@ -56,7 +60,7 @@ public class KajalAct {
             e.printStackTrace(); 
         }
         
-        helper.sendKeys(KajalLoc.searchBar, "Kajal", test, "placeholder");  
+        helper.sendKeys(KajalLoc.searchBar, ExcelFileReader.readData(Base.prop.getProperty("sheet4"), 1, 0, test), test, "placeholder");  
 
         AssertionUtility.useAssertEquals(helper.getText(KajalLoc.searchBar, test),ExcelFileReader.readData(Base.prop.getProperty("sheet4").toLowerCase(), 1, 0, test) , test);
 

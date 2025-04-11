@@ -2,6 +2,7 @@ package pages;
 
 import com.aventstack.extentreports.ExtentTest;
 
+import uistore.HomePageLoc;
 import uistore.TermsConditionsLoc;
 import utils.AssertionUtility;
 import utils.Base;

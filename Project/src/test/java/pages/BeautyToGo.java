@@ -3,6 +3,7 @@ package pages;
 import com.aventstack.extentreports.ExtentTest;
 
 import uistore.BeautyToGoLoc;
+import uistore.HomePageLoc;
 import utils.AssertionUtility;
 import utils.Base;
 import utils.ExcelFileReader;
