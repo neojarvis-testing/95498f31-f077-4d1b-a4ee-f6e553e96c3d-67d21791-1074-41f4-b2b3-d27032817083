@@ -31,5 +31,12 @@ public class NykaaKurtaSearch {
         help.waitForElementToBeVisible(NykaaKurtaSearchLoc.SecondProduct,4 ,test);
         help.hoverAndClick(test, NykaaKurtaSearchLoc.SecondProduct, NykaaKurtaSearchLoc.SecondProduct);
         help.switchToWindow(1,test);
+        try{
+            Thread.sleep(2000);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 }

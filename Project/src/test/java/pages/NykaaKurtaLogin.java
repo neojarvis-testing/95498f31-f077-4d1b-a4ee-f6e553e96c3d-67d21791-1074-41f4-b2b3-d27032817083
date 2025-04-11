@@ -22,8 +22,29 @@ public class NykaaKurtaLogin {
  */
   public void kurtaLogin(ExtentTest test) {
     help.waitForElementToBeVisible(NykaaKurtaLoginLoc.mobile, 3, test);
+    try{
+      Thread.sleep(4000);
+    }
+    catch(Exception e){
+      e.printStackTrace();
+    }
+    
     help.clickOnElement(NykaaKurtaLoginLoc.mobile, test);
+    try{
+      Thread.sleep(2000);
+    }
+    catch(Exception e){
+      e.printStackTrace();
+    }
+    
     help.sendKeys(NykaaKurtaLoginLoc.mobile, "9876543210", test, "name");
+    try{
+      Thread.sleep(4000);
+    }
+    catch(Exception e){
+      e.printStackTrace();
+    }
+
     help.waitForElementToBeVisible(NykaaKurtaLoginLoc.submit, 3, test);
     help.clickOnElement(NykaaKurtaLoginLoc.submit, test);
     Screenshot.captureScreenshot(Base.driver, test, "Login.png");
