@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import com.aventstack.extentreports.ExtentTest;
 import uistore.LocFooter;

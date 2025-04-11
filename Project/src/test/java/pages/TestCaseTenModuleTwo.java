@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import com.aventstack.extentreports.ExtentTest;
 import uistore.LocFirstProduct;
@@ -16,7 +16,6 @@ public class TestCaseTenModuleTwo {
            
             wb.clickOnElement(LocFooter.clickNykaaMan, test);
             Base.driver.navigate().to(Base.prop.getProperty("url"));
-            //wb.waitForElementToBeVisible(LocNykaaMan.clickHealth, 4, test);
             wb.hoverOverElement(LocNykaaMan.clickHealth, test);
             wb.clickOnElement(LocNykaaMan.clickWheyProtein, test);
             wb.switchToWindow(2, test);
