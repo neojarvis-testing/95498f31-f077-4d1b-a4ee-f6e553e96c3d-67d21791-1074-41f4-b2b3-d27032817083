@@ -19,7 +19,7 @@ public class Screenshot {
         String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
         String name = filename + timestamp + ".png";
 
-       // String destPath = "./" + name;
+        String destPath = "./" + name;
 
         ts = (TakesScreenshot) driver;
         File file = ts.getScreenshotAs(OutputType.FILE);
@@ -34,7 +34,6 @@ public class Screenshot {
         File target = new File(screenshotsDir, name);
         try {
             Files.copy(file, target);
-            
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,5 +1,3 @@
- 
-
 package utils;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -77,12 +75,7 @@ public class Reporter {
         extentReport.attachReporter(sparkReporter);
 
         extentReport.setSystemInfo("Application URL", prop.getProperty("url"));
-        extentReport.setSystemInfo("Browser Name", prop.getProperty("browserName"));
-        extentReport.setSystemInfo("Email", prop.getProperty("validEmail"));
-        extentReport.setSystemInfo("Password", prop.getProperty("validPassword"));
-        extentReport.setSystemInfo("Operating System", System.getProperty("os.name"));
-        extentReport.setSystemInfo("Username", System.getProperty("user.name"));
-        extentReport.setSystemInfo("Java Version", System.getProperty("java.version"));
+        
 
         return extentReport;
     }
