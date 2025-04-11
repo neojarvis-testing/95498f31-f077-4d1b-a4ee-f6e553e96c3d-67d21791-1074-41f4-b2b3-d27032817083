@@ -42,7 +42,7 @@ public class TestRunerTharikaa extends Base{
  *
  * @param test ExtentTest object for logging and reporting.
  * @return void
- * @priority 1
+ * 
  * @enabled true
  * @author Tharikaa Srinithi
  */
@@ -67,7 +67,7 @@ public class TestRunerTharikaa extends Base{
  *
  * @param test ExtentTest object for logging and reporting.
  * @return void
- * @priority 2
+ * 
  * @enabled true
  * @author Tharikaa Srinithi
  */

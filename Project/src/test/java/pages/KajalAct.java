@@ -14,21 +14,52 @@ import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
+/**
+ * Represents functionality related to the Kajal product section.
+ * Provides methods to search for Kajal products, perform validations, 
+ * and interact with formulations.
+ * 
+ * @author Pratik
+ * 
+ */
 public class KajalAct {
     WebDriverHelper helper=new WebDriverHelper(Base.driver); 
 
-    public void getKajal(ExtentTest test) throws InterruptedException{  
+
+    /**
+     * Executes the workflow for selecting Kajal products by calling
+     * relevant methods for searching and interacting with formulations.
+     * 
+     * @param test ExtentTest instance for reporting.
+     * @author Pratik
+     */
+    public void getKajal(ExtentTest test) {  
         sendKajal(test); 
         formuPencil(test);
 
     }
-    public void sendKajal(ExtentTest test) throws InterruptedException{ 
+
+    /**
+     * Searches for Kajal products by interacting with the search bar,
+     * verifying categories, and using assertions to ensure the displayed 
+     * text matches expected data.
+     * 
+     * @param test ExtentTest instance for reporting.
+     * @author Pratik
+     */
+    public void sendKajal(ExtentTest test) { 
 
         AssertionUtility.useAssertEquals(helper.getText(KajalLoc.categories, test),ExcelFileReader.readData(Base.prop.getProperty("sheet4").toLowerCase(), 0, 0, test) , test);
 
         helper.clickOnElement(KajalLoc.searchBar,test,"placeholder");  
 
-        Thread.sleep(2000);
+        try { 
+            Thread.sleep(2000);
+        }
+        catch(Exception e){ 
+            e.printStackTrace(); 
+        }
+        
         helper.sendKeys(KajalLoc.searchBar, ExcelFileReader.readData(Base.prop.getProperty("sheet4"), 1, 0, test), test, "placeholder");  
 
         AssertionUtility.useAssertEquals(helper.getText(KajalLoc.searchBar, test),ExcelFileReader.readData(Base.prop.getProperty("sheet4").toLowerCase(), 1, 0, test) , test);
@@ -37,7 +68,15 @@ public class KajalAct {
 
         AssertionUtility.useAssertTrue(helper.getText(KajalLoc.kajalVerify,test),ExcelFileReader.readData(Base.prop.getProperty("sheet4"), 1, 0, test),test); 
     } 
-    public void formuPencil(ExtentTest test) throws InterruptedException{ 
+
+    /**
+     * Interacts with the Kajal formulations section by hovering and clicking 
+     * on formulation and pencil options. Scrolls the page back afterward.
+     * 
+     * @param test ExtentTest instance for reporting.
+     * @author Pratik
+     */
+    public void formuPencil(ExtentTest test) { 
         helper.hoverAndClick(test, KajalLoc.formulation, KajalLoc.formulation);
 
         helper.hoverAndClick(test, KajalLoc.pencil, KajalLoc.pencil); 

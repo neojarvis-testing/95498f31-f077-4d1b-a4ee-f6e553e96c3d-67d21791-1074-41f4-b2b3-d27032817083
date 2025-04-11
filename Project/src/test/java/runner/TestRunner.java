@@ -41,12 +41,29 @@ public class TestRunner extends Base{
         openBrowser();
     }
 
+    /**
+     * Executes TestCase 5 by using TestCase5Actions.
+     * Creates a test instance in the report and completes the associated test actions.
+     * 
+     * @priority 3
+     * @author Abhiram
+     */
     @Test(priority = 3)
     public void testcase5(){ 
+        
         TestCase5Actions ta5 = new TestCase5Actions();
         test=reports.createTest("TestCase 5");
         ta5.completeTestCase5(test);
     }
+
+
+    /**
+     * Executes TestCase 6 by using TestCase6Actions.
+     * Creates a test instance in the report and completes the associated test actions.
+     * 
+     * @priority 4
+     * @author Abhiram
+     */
     @Test(priority = 4)
     public void testcase6(){ 
         test=reports.createTest("TestCase 6");
@@ -54,8 +71,15 @@ public class TestRunner extends Base{
         ta6.testCase06(test);
     }
 
+    /**
+     * Executes actions related to the homepage, beauty offers, terms and conditions, 
+     * and offer zone. Combines multiple actions and validations into a single test case.
+     * 
+     * @priority 2
+     * @author Pratik
+     */
     @Test(priority=1)     
-    public void beautyAndOffer() throws InterruptedException{ 
+    public void beautyAndOffer() { 
         HomePageAct action =new HomePageAct();
         BeautyToGo action1=new BeautyToGo(); 
         TermsConditions action2=new TermsConditions();
@@ -67,9 +91,16 @@ public class TestRunner extends Base{
         action3.offerZone(test); 
     }
 
-    @Test(priority=2) 
 
-    public void kajalAddToBag() throws InterruptedException{ 
+
+    /**
+     * Executes actions related to selecting Kajal products, viewing new launches, 
+     * and adding products to the shopping bag. Combines these actions into a single test case.
+     * @priority 2
+     * @author Pratik
+     */
+    @Test(priority=2) 
+    public void kajalAddToBag() { 
         KajalAct action =new KajalAct(); 
         NewLaunches action1=new NewLaunches();
         AddToBag action2=new AddToBag();

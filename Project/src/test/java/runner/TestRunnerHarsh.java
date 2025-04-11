@@ -44,7 +44,7 @@ public class TestRunnerHarsh extends Base {
      *
      * This test is executed with priority 1 and is enabled.
      *
-     * @priority 1
+     * @priority 6
      * @enabled true
      * @return void
      * @author Harshit
@@ -67,7 +67,7 @@ public class TestRunnerHarsh extends Base {
      *
      * This test is executed with priority 2 and is enabled.
      *
-     * @priority 2
+     * @priority 7
      * @enabled true
      * @return void
      * @author Harshit

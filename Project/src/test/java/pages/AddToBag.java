@@ -11,18 +11,37 @@ import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
+/**
+ * Represents functionality related to adding a product to the shopping bag.
+ * Provides methods to interact with elements like selecting a product, 
+ * adding it to the bag, and verifying product details.
+ * 
+ * @author Pratik
+ */
 public class AddToBag {
     
     WebDriverHelper helper=new WebDriverHelper(Base.driver); 
 
-    public void firstProduct(ExtentTest test) throws InterruptedException{ 
+    /**
+     * Selects the first product from the product list on the page.
+     * 
+     * @param test ExtentTest instance for reporting.
+     * @author Pratik
+     */
+    public void firstProduct(ExtentTest test) { 
         
         helper.clickOnElement(AddToBagLoc.firstProduct,test); 
         
     } 
 
 
-    public void addTo(ExtentTest test) throws InterruptedException{ 
+    /**
+     * Switches to the new window and adds the product to the shopping bag.
+     * 
+     * @param test ExtentTest instance for reporting.
+     * @author Pratik
+     */
+    public void addTo(ExtentTest test) { 
         helper.switchToWindow(2, test);
 
         helper.hoverAndClick(test, AddToBagLoc.addToBag, AddToBagLoc.addToBag);
@@ -30,7 +49,14 @@ public class AddToBag {
         helper.waitForElementToBeVisible(AddToBagLoc.addToBag, 5, test); 
     } 
     
-    public void howToUse(ExtentTest test) throws InterruptedException{
+    /**
+     * Interacts with the 'How to Use' section and verifies its contents using assertions.
+     * Captures and attaches a screenshot to the test report.
+     * 
+     * @param test ExtentTest instance for reporting.
+     * @author Pratik
+     */
+    public void howToUse(ExtentTest test) {
         
         helper.hoverAndClick(test,AddToBagLoc.howToUse, AddToBagLoc.howToUse);
         
@@ -43,8 +69,15 @@ public class AddToBag {
 
     }
 
+    /**
+     * Combines the selection of the product, adding to the shopping bag, 
+     * and interacting with the 'How to Use' section into a single workflow.
+     * 
+     * @param test ExtentTest instance for reporting.
+     * @author Pratik
+     */
 
-    public void addToBag(ExtentTest test) throws InterruptedException{
+    public void addToBag(ExtentTest test) {
         firstProduct(test); 
         addTo(test);
         howToUse(test);
