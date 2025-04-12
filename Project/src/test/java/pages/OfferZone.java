@@ -3,6 +3,7 @@ package pages;
 import com.aventstack.extentreports.ExtentTest;
 
 import uistore.OfferZoneLoc;
+import uistore.TermsConditionsLoc;
 import utils.AssertionUtility;
 import utils.Base;
 import utils.ExcelFileReader;
