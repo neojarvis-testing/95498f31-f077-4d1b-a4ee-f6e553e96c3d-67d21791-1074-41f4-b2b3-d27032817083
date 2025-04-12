@@ -37,7 +37,7 @@ public class TestRunnerKumaran extends Base{
         test = report.createTest("TestCase9");
     }
 
-    @Test(enabled=true)
+    @Test
     public void testCase1()
     {
          NykaaHomePage action1 = new NykaaHomePage();

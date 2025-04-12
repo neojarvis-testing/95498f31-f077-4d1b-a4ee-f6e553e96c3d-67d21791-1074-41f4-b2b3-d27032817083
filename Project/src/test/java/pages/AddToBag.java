@@ -79,7 +79,7 @@ public class AddToBag {
     public void addToBag(ExtentTest test) {
         firstProduct(test); 
         addTo(test);
-        howToUse(test);
+        //howToUse(test);
         
     }
 

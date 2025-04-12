@@ -44,8 +44,9 @@ public class BeautyToGo {
         AssertionUtility.useAssertTrue(helper.getText(BeautyToGoLoc.beautyToGo, test), ExcelFileReader.readData(Base.prop.getProperty("sheet1"), 0, 0, test),test); 
         helper.clickOnElement(BeautyToGoLoc.inputBar, test);
 
-        helper.sendKeys(BeautyToGoLoc.inputBar, ExcelFileReader.readData(Base.prop.getProperty("sheet1"),1, 0, test), test, "placeholder"); 
+        helper.sendKeys(BeautyToGoLoc.inputBar, "9123456789", test, "placeholder"); 
 
+        
     }
 
     /**

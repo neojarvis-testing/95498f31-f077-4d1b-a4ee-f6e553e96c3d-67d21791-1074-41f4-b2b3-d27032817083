@@ -42,6 +42,10 @@ public class LoggerHandler {
     public static void trace(String message) {
         logger.trace(message);
     }
+
+    public static void error(String message) {
+        logger.error(message);
+    }
  
     
     public static void debug(String message) {
@@ -59,10 +63,6 @@ public class LoggerHandler {
     }
  
     
-    public static void error(String message) {
-        logger.error(message);
-    }
- 
     
     public static void fatal(String message) {
         logger.fatal(message);

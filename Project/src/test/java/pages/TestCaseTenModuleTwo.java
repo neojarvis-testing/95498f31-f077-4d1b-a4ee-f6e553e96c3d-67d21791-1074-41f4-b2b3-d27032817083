@@ -18,7 +18,20 @@ public class TestCaseTenModuleTwo {
             Base.driver.navigate().to(Base.prop.getProperty("url"));
             wb.hoverOverElement(LocNykaaMan.clickHealth, test);
             wb.clickOnElement(LocNykaaMan.clickWheyProtein, test);
-            wb.switchToWindow(2, test);
+            wb.switchInToWindown();
+            try{
+      Thread.sleep(4000);
+    }
+    catch(Exception e){
+      e.printStackTrace();
+    }
+    wb.switchInToWindown();
+            try{
+      Thread.sleep(4000);
+    }
+    catch(Exception e){
+      e.printStackTrace();
+    }
             AssertionUtility.useAssertEquals(wb.getText(LocNykaaMan.verifyThree, test), ExcelFileReader.readData( "Sheet1", 5, 0, test), test);
 
         }
@@ -36,6 +49,13 @@ public class TestCaseTenModuleTwo {
         wb.waitForElementToBeVisible(LocFirstProduct.clickPincode, 3, test);
         wb.clickOnElement(LocNykaaMan.clickFirstProd, test);
         wb.switchToWindow(3, test);
+        try{
+            Thread.sleep(4000);
+          }
+          catch(Exception e){
+            e.printStackTrace();
+          }
+        
     }
 
 
