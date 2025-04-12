@@ -16,7 +16,6 @@ public class TestCaseTenModuleTwo {
            
             wb.clickOnElement(LocFooter.clickNykaaMan, test);
             Base.driver.navigate().to(Base.prop.getProperty("url"));
-            //wb.waitForElementToBeVisible(LocNykaaMan.clickHealth, 4, test);
             wb.hoverOverElement(LocNykaaMan.clickHealth, test);
             wb.clickOnElement(LocNykaaMan.clickWheyProtein, test);
             wb.switchInToWindown();
@@ -65,6 +64,9 @@ public void nykaaManPage(ExtentTest test) throws InterruptedException{
     nykaaScroll(test);
     nykaaSwitch(test);
 }
+
+
+
 
 }
 
