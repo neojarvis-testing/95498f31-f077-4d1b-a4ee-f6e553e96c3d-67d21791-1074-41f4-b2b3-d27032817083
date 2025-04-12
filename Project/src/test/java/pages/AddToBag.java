@@ -1,6 +1,7 @@
 package pages;
 
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
 import uistore.AddToBagLoc;
 import utils.Base;
@@ -59,7 +60,7 @@ public class AddToBag {
         helper.hoverAndClick(test,AddToBagLoc.howToUse, AddToBagLoc.howToUse);
         
         helper.waitForElementToBeVisible(AddToBagLoc.howToUse, 5, test);
-
+        
         AssertionUtility.useAssertEquals(helper.getText(AddToBagLoc.howToUse, test),ExcelFileReader.readData(Base.prop.getProperty("sheet4").toLowerCase(), 3, 0, test) , test);
 
         Screenshot.captureScreenshot(Base.driver, test, "nykaa");

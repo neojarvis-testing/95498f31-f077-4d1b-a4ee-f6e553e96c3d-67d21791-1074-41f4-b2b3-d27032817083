@@ -44,12 +44,12 @@ public class WebDriverHelper {
     public void waitForElementToBeVisible(By locator, int timeoutInSeconds,ExtentTest test) {
         
         try {
-            LoggerHandler.info("Wait for to be visible"); 
-            test.log(Status.INFO, "Wait for to be visible"); 
+            LoggerHandler.info("Wait for the Element to be visible"); 
+            test.log(Status.INFO, "Wait for the Element to be visible"); 
             new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds))
                 .until(ExpectedConditions.visibilityOfElementLocated(locator));
-            LoggerHandler.info("Waited for to be visible"); 
-            test.log(Status.INFO, "Waited for to be visible"); 
+            LoggerHandler.info("Waited for the Element to be visible"); 
+            test.log(Status.INFO, "Waited for the Element to be visible"); 
         } catch (Exception e) {
             LoggerHandler.info("Element not visible :"+e.getMessage());
             test.log(Status.FAIL, "Element not visible :"+e.getMessage()); 
@@ -76,11 +76,10 @@ public class WebDriverHelper {
         
         try {
             WebElement webElement = driver.findElement(locator);
-            LoggerHandler.info("Click"); 
-            test.log(Status.INFO, "Click"); 
+            LoggerHandler.info("Click The Element"); 
+            test.log(Status.INFO, "Click The Element"); 
             webElement.click();
-            LoggerHandler.info("Clicked"); 
-            test.log(Status.INFO, "Clicked"); 
+             
         } catch (Exception e) {
             LoggerHandler.info("Element not clicked :"+e.getMessage());
             test.log(Status.FAIL, "Element not clicked :"+e.getMessage()); 
