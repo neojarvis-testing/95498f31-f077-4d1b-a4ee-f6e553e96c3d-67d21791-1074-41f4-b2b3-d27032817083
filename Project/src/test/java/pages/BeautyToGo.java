@@ -42,7 +42,6 @@ public class BeautyToGo {
     public void sendBeauty(ExtentTest test){ 
         helper.waitForElementToBeVisible(BeautyToGoLoc.beautyToGo, 10, test);
         AssertionUtility.useAssertTrue(helper.getText(BeautyToGoLoc.beautyToGo, test), ExcelFileReader.readData(Base.prop.getProperty("sheet1"), 0, 0, test),test); 
-
         helper.clickOnElement(BeautyToGoLoc.inputBar, test);
 
         helper.sendKeys(BeautyToGoLoc.inputBar, ExcelFileReader.readData(Base.prop.getProperty("sheet1"),1, 0, test), test, "placeholder"); 
