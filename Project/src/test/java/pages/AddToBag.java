@@ -1,12 +1,14 @@
 package pages;
 
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
 import uistore.AddToBagLoc;
 import uistore.KajalLoc;
 import utils.AssertionUtility;
 import utils.Base;
 import utils.ExcelFileReader;
+import utils.LoggerHandler;
 import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
@@ -61,7 +63,7 @@ public class AddToBag {
         helper.hoverAndClick(test,AddToBagLoc.howToUse, AddToBagLoc.howToUse);
         
         helper.waitForElementToBeVisible(AddToBagLoc.howToUse, 5, test);
-
+        
         AssertionUtility.useAssertEquals(helper.getText(AddToBagLoc.howToUse, test),ExcelFileReader.readData(Base.prop.getProperty("sheet4").toLowerCase(), 3, 0, test) , test);
 
         Screenshot.captureScreenshot(Base.driver, test, "nykaa");
