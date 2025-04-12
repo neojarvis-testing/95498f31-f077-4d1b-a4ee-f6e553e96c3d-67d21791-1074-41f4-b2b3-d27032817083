@@ -8,3 +8,4 @@ public class NykaaPillowProductLoc {
    public static By CartIcon = By.xpath("//button[@id = 'header-bag-icon']");
    
 }
+
