@@ -53,6 +53,12 @@ public class NykaaLuxe {
     public void firstProductClick() {
         helper.hoverAndClick(TestRunnerKumaran.test, NykaaLuxeLoc.firstProduct, NykaaLuxeLoc.firstProduct);
         helper.switchToWindow(2, TestRunnerKumaran.test);
+        try{
+            Thread.sleep(4000);
+          }
+          catch(Exception e){
+            e.printStackTrace();
+          }
     }
 
     /**

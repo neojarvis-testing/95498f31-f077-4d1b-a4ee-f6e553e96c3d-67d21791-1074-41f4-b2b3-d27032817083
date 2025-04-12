@@ -51,15 +51,14 @@ public class KajalAct {
 
         AssertionUtility.useAssertEquals(helper.getText(KajalLoc.categories, test),ExcelFileReader.readData(Base.prop.getProperty("sheet4").toLowerCase(), 0, 0, test) , test);
 
-        try{ 
+        helper.clickOnElement(KajalLoc.searchBar,test,"placeholder");  
+
+        try { 
             Thread.sleep(2000);
         }
         catch(Exception e){ 
-            
+            e.printStackTrace(); 
         }
-        helper.clickOnElement(KajalLoc.searchBar,test,"placeholder");  
-
-        
         
         helper.sendKeys(KajalLoc.searchBar, "Kajal", test, "placeholder");  
 

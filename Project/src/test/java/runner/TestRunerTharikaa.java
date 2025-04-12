@@ -46,7 +46,7 @@ public class TestRunerTharikaa extends Base{
  * @enabled true
  * @author Tharikaa Srinithi
  */
-    @Test(enabled = true)
+    @Test
 
     public void testcase1(){ 
       test = report.createTest("NYKAA_Report");

@@ -35,7 +35,7 @@ public class TestCase5Actions {
 
     public void clickOnHelp_ClickOnOrderRelated(ExtentTest test){
         helper.clickOnElement(HomePageLocators.homepage_Help, test);
-        helper.switchToWindow(1, test);;
+        helper.switchToWindow(1, test);
         helper.waitForElementToBeVisible(HelpCentreLocators.helpCentre_OrderRelated, 4, test);
         helper.clickOnElement(HelpCentreLocators.helpCentre_OrderRelated, test);
     }
@@ -93,3 +93,8 @@ public class TestCase5Actions {
         Screenshot.captureScreenshot(Base.driver, test, "Cancellation policy");
     }
 }
+
+
+
+
+
