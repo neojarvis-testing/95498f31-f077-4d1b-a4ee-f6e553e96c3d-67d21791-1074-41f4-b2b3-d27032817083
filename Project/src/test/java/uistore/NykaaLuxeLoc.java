@@ -14,4 +14,3 @@ public class NykaaLuxeLoc {
     public static By dayWear = By.cssSelector("[for='checkbox_Day Wear_212287']");
     public static By firstProduct = By.xpath("(//div[@class='css-ifdzs8'])[1]");
 }
-

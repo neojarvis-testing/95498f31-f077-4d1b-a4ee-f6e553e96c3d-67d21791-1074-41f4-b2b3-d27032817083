@@ -11,4 +11,3 @@ public class LocFirstProduct {
     public static By verifyChennai =By.xpath("//span[@class='css-ew9amy']");
     public static By verifySignin =By.xpath("//h2[@class='section-heading']"); 
 }
-

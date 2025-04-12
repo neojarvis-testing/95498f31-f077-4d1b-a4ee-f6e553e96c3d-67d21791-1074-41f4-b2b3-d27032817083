@@ -11,4 +11,3 @@ public class TonerLoc {
     public static By tonerDisplayed = By.xpath("//h1[text()='Buy Skin Toners & Mist Online']");
 
 }
-

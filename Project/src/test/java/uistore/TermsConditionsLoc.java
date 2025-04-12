@@ -8,4 +8,3 @@ public class TermsConditionsLoc {
     public static By privacyPolicy=By.cssSelector("a[href='#privacy-policy']");
     
 }
-

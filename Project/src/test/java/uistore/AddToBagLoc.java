@@ -10,4 +10,3 @@ public class AddToBagLoc {
     
     public static By howToUse=By.xpath("(//h3[@class=' css-u4mhfc'])[2]");
 }
-

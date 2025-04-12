@@ -48,4 +48,3 @@ public void nykaaManPage(ExtentTest test) throws InterruptedException{
 
 }
 
-

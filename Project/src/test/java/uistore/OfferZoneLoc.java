@@ -7,4 +7,3 @@ public class OfferZoneLoc {
    
     public static By NykaaLogo=By.cssSelector("a[class='logo css-kus7g9']"); 
 }
-

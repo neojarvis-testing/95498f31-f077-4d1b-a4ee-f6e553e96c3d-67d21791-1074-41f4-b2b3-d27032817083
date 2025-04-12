@@ -77,4 +77,3 @@ public class NaturalFaceWashAction {
         clickFirstProduct(test);
     }
 }
-

@@ -28,10 +28,9 @@ public class NykaaKurtaLogin {
     catch(Exception e){
       e.printStackTrace();
     }
-    
     help.clickOnElement(NykaaKurtaLoginLoc.mobile, test);
     try{
-      Thread.sleep(2000);
+      Thread.sleep(4000);
     }
     catch(Exception e){
       e.printStackTrace();
@@ -44,8 +43,6 @@ public class NykaaKurtaLogin {
     catch(Exception e){
       e.printStackTrace();
     }
-
-    help.waitForElementToBeVisible(NykaaKurtaLoginLoc.submit, 3, test);
     help.clickOnElement(NykaaKurtaLoginLoc.submit, test);
     Screenshot.captureScreenshot(Base.driver, test, "Login.png");
     LoggerHandler.info("Login Page");

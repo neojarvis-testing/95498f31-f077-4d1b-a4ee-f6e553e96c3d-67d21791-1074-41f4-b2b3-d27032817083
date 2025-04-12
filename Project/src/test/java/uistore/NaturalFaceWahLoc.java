@@ -9,4 +9,3 @@ public static By clickPriceDropdown = By.xpath("//span[text()='Price']");
     public static By verifyFaceWash = By.cssSelector("h1[class='css-c0pzm0']");
 
 }
-

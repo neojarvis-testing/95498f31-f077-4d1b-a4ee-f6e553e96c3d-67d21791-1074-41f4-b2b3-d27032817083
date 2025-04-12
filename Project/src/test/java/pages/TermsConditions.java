@@ -41,4 +41,3 @@ public class TermsConditions {
         helper.waitForElementToBeVisible(TermsConditionsLoc.privacyPolicy, 10, test);
     }
 }
-

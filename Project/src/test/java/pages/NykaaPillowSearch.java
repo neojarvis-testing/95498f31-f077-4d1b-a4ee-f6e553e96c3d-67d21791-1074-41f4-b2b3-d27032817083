@@ -3,7 +3,9 @@ package pages;
 import com.aventstack.extentreports.ExtentTest;
 
 import uistore.NykaaPillowSearchLoc;
+import utils.AssertionUtility;
 import utils.Base;
+import utils.ExcelFileReader;
 import utils.WebDriverHelper;
 
 public class NykaaPillowSearch {
@@ -23,6 +25,10 @@ public class NykaaPillowSearch {
 
         boolean newtext = Base.driver.findElement(NykaaPillowSearchLoc.verifypillow).isDisplayed();
         System.out.println(newtext);
+        String actual = ExcelFileReader.readData(Base.prop.getProperty("sheet1"), 9, 0, test);
+        String expected = "Pillow";
+        AssertionUtility.useAssertEquals(actual, expected, test);
+        
     }
 
 

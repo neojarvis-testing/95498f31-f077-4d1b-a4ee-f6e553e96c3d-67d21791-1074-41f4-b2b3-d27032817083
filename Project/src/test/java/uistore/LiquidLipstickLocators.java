@@ -11,4 +11,3 @@ public class LiquidLipstickLocators {
     public static By LiquidLipstick_ThirdOption = By.xpath("//option[text()='Vacation Nude']");
     public static By LiquidLipstick_ContactUs = By.linkText("Contact Us");
 }
-
