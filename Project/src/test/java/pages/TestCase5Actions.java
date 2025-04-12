@@ -56,7 +56,6 @@ public class TestCase5Actions {
             Thread.sleep(2000);
             Base.driver.navigate().back();
             Thread.sleep(2000);
-
             helper.waitForElementToBeVisible(HelpCentreLocators.helpCentre_returnsAndRefund, 4, test);
             helper.hoverOverElement(HelpCentreLocators.helpCentre_returnsAndRefund, test);
             helper.clickOnElement(HelpCentreLocators.helpCentre_returnsAndRefund, test);
